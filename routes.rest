@@ -1,2 +1,43 @@
-//PRODUCTION
-GET https://cse-341-project1-e6ot.onrender.com/contacts 
+### GET all contacts
+GET http://localhost:3000/contacts
+Content-Type: application/json
+
+###
+
+### GET contact by ID
+GET http://localhost:3000/contacts/690643a869ef60deab8a6ac8
+Content-Type: application/json
+
+###
+
+### POST create new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Gaby",
+  "lastName": "Ugarte",
+  "email": "gaby@example.com",
+  "favoriteColor": "Purple",
+  "birthday": "1995-07-19"
+}
+
+###
+
+### PUT update contact
+PUT http://localhost:3000/contacts/690643a869ef60deab8a6ac8
+Content-Type: application/json
+
+{
+  "firstName": "Gaby Updated",
+  "lastName": "Ugarte",
+  "email": "gaby.updated@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "1995-07-19"
+}
+
+###
+
+### DELETE contact
+DELETE http://localhost:3000/contacts/690f4ce0e28e25c45e95d1c2
+Content-Type: application/json
