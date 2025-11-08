@@ -32,11 +32,11 @@ const createContact = async (req, res) => {
 
     const result = await mongodb.getDatabase().collection('Contacts').insertOne(newContact);
 
-    console.log('✅ Insert result:', result);
+    console.log(' Insert result:', result);
 
     res.status(201).json({ message: 'Contact created successfully', id: result.insertedId });
   } catch (err) {
-    console.error('❌ Error inserting contact:', err);
+    console.error('Error inserting contact:', err);
     res.status(500).json({ message: 'Error creating contact', error: err });
   }
 };
@@ -60,7 +60,7 @@ const updateContact = async (req, res) => {
       res.status(404).json({ message: 'Contact not found or not updated' });
     }
   } catch (error) {
-    console.error('❌ Error updating contact:', error);
+    console.error(' Error updating contact:', error);
     res.status(500).json({ message: 'Error updating contact', error });
   }
 };
@@ -76,7 +76,7 @@ const deleteContact = async (req, res) => {
       res.status(404).json({ message: 'Contact not found' });
     }
   } catch (error) {
-    console.error('❌ Error deleting contact:', error);
+    console.error('Error deleting contact:', error);
     res.status(500).json({ message: 'Error deleting contact', error });
   }
 };

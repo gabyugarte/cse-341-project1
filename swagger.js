@@ -7,7 +7,7 @@ const doc = {
     description: 'API to manage contacts (GET, POST, PUT, DELETE)',
     version: '1.0.0',
   },
-  host: 'localhost:3000', 
+  host: 'cse-341-project1-e6ot.onrender.com', 
   schemes: ['https', 'http'],
   definitions: {
     Contact: {
@@ -21,7 +21,7 @@ const doc = {
 };
 
 const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/index.js']; // el archivo principal de tus rutas
+const endpointsFiles = ['./routes/index.js']; 
 
 swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
 
