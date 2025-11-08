@@ -20,7 +20,7 @@ const getSingle = async (req, res) => {
 
 const createContact = async (req, res) => {
   try {
-    console.log('📨 Received contact:', req.body);
+    console.log('Received contact:', req.body);
 
     const newContact = {
       firstName: req.body.firstName,
