@@ -7,7 +7,7 @@ const doc = {
     description: 'API to manage contacts (GET, POST, PUT, DELETE)',
     version: '1.0.0',
   },
-  host: 'cse-341-project1-e6ot.onrender.com', 
+  host: 'localhost:3000', 
   schemes: ['https', 'http'],
   definitions: {
     Contact: {
